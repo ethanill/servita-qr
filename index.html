@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servita</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #181818;
+      --crimson: #D10F3F;
+      --white: #FAFAFA;
+      --gray: #888;
+    }
+
+    html { height: 100%; }
+
+    body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--white);
+      color: var(--black);
+      padding: 2rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.25rem;
+    }
+
+    .logo svg {
+      display: block;
+      width: 148px;
+      height: auto;
+    }
+
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0.875rem 1.25rem;
+      border-radius: 6px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    }
+
+    .links a.primary {
+      background: var(--black);
+      color: var(--white);
+    }
+    .links a.primary:hover {
+      background: #2a2a2a;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    .links a.outline {
+      background: transparent;
+      color: var(--black);
+      box-shadow: inset 0 0 0 1.5px var(--black);
+    }
+    .links a.outline:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .accent-bar {
+      width: 48px;
+      height: 3px;
+      background: var(--crimson);
+      border-radius: 2px;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.75rem;
+      color: var(--gray);
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <svg width="124" height="38" viewBox="0 0 124 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2941 7.23871C12.7491 6.60324 11.5895 6.30648 10.2159 6.30648C8.24213 6.30648 7.12582 7.15403 7.12582 8.42574C7.12582 9.61278 8.06985 10.4603 10.0444 11.9014L11.2032 12.7497C14.6379 15.2504 17.3418 17.4971 17.3418 21.863C17.3418 26.441 13.9503 30.3835 7.64032 30.3835C4.50694 30.3835 2.40412 29.5352 0.557762 28.603L2.53235 24.2798C4.16394 25.0846 5.62325 25.6781 7.34059 25.6781C9.40093 25.6781 10.2159 24.5338 10.2159 23.4315C10.2159 22.0324 9.09962 21.1421 7.03929 19.6163L6.00951 18.8535C2.14609 16.0133 0 13.5545 0 9.82486C0 5.20413 4.03492 1.60107 9.74392 1.60107C12.7916 1.60107 14.8519 2.4059 15.9257 2.83006L14.2941 7.23871Z" fill="#181818"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M31.4626 16.5218C31.4626 15.1234 31.4626 12.3679 29.2732 12.3679C26.9556 12.3679 26.9124 15.4202 26.8699 16.5218H31.4626ZM26.6551 19.9555C26.4828 22.6263 27.3419 25.9745 30.9473 25.9745C32.4066 25.9745 34.0382 25.1689 35.197 24.4907L37.1716 28.1365C35.798 28.8567 32.9652 30.3832 29.4022 30.3832C23.178 30.3832 18.8425 26.0592 18.8425 19.4039C18.8425 12.8767 23.3062 8.59473 28.9727 8.59473C38.7166 8.59473 38.0299 18.1329 38.0299 19.9555H26.6551Z" fill="#181818"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M47.5578 9.01897L47.8583 14.3171C48.4593 12.5373 49.8753 8.76416 53.181 8.76416C53.9103 8.76416 54.4255 8.84884 55.1131 9.01897L54.0393 15.3348C53.6963 15.2921 52.923 15.1227 52.3227 15.1227C51.6359 15.1227 49.8753 15.3348 48.9738 17.4968C48.416 18.8951 48.416 21.9054 48.416 23.6013V29.9591H41.033V9.01897H47.5578Z" fill="#181818"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M64.2539 9.01917L67.7311 19.4896L71.165 9.01917H76.273L68.4604 29.9593H63.9959L56.1841 9.01917H64.2539Z" fill="#181818"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M99.1059 3.46582V9.01878H102.711V12.8766H99.5347V23.0496C99.5347 24.9148 99.5347 25.8897 101.081 25.8897C101.552 25.8897 101.896 25.8051 102.325 25.6784L103.269 29.5355C101.552 30.0871 99.7494 30.2984 97.9039 30.2984C96.0142 30.2984 93.7824 29.6629 92.7959 27.7969C92.1083 26.4833 92.1516 25.0422 92.1516 23.7277V12.8766H89.4902V9.01878H92.4088L92.6661 3.46582H99.1059Z" fill="#181818"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M111.724 23.6432C111.724 25.2963 112.969 25.8044 113.741 25.8044C114.944 25.8044 115.544 24.9996 115.844 23.8972C116.188 22.7949 116.188 21.4385 116.188 20.5062V19.4886C113.313 20.7175 111.724 21.4385 111.724 23.6005V23.6432ZM117.004 29.959L116.618 27.0342C115.201 29.1954 113.313 30.3832 110.693 30.3832C107.088 30.3832 104.942 27.6277 104.942 24.4907C104.942 19.9127 109.363 18.1322 116.188 16.0129V15.6734C116.188 13.6388 114.17 13.1727 112.454 13.1727C110.736 13.1727 109.191 13.6388 107.603 14.4017L106.058 10.5446C108.676 9.31565 111.51 8.59473 114.428 8.59473C117.647 8.59473 121.168 9.52695 122.585 12.1131C123.056 12.9607 123.313 13.8509 123.313 16.6064V22.2441C123.313 23.7271 123.442 27.6277 124 29.959H117.004Z" fill="#181818"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M78.9316 37.2803H102.384V33.0535H78.9316V37.2803Z" fill="#D10F3F"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M86.3153 4.36538C86.3153 6.37899 84.6624 8.01116 82.6233 8.01116C80.5842 8.01116 78.9314 6.37899 78.9314 4.36538C78.9314 2.35178 80.5842 0.719604 82.6233 0.719604C84.6624 0.719604 86.3153 2.35178 86.3153 4.36538Z" fill="#181818"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M86.3153 9.01917V29.9593H78.9314V12.8902C78.9314 12.8902 78.9597 11.4857 80.1948 10.266C81.4299 9.04713 83.5681 9.01917 83.5681 9.01917H86.3153Z" fill="#181818"/>
+      </svg>
+    </div>
+
+    <div class="accent-bar"></div>
+
+    <nav class="links">
+      <a href="https://REPLACE_WITH_FORM_URL" class="primary">Form</a>
+      <a href="https://servita.com/" class="outline" target="_blank" rel="noopener">Servita</a>
+      <a href="https://enshoresubsea.com/" class="outline" target="_blank" rel="noopener">Enshore Subsea</a>
+    </nav>
+  </div>
+
+  <footer>&copy; Servita 2026</footer>
+</body>
+</html>
